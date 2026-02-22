@@ -1,0 +1,19 @@
+{
+  "name": "ash-secure-shop",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Demo app showing @3maem/ash-node-sdk protecting a real e-commerce API",
+  "workspaces": [
+    "apps/api",
+    "apps/web"
+  ],
+  "scripts": {
+    "dev": "concurrently -n api,web -c blue,green \"npm run dev -w apps/api\" \"npm run dev -w apps/web\"",
+    "build": "npm run build -w apps/api && npm run build -w apps/web",
+    "db:setup": "npm run db:migrate -w apps/api && npm run db:seed -w apps/api",
+    "setup": "npm install && npm run db:setup"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
