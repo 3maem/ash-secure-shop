@@ -1,5 +1,7 @@
 # ASH Secure Shop
 
+> Last updated: 2026-02-22
+
 A full-stack demo app proving that [`@3maem/ash-node-sdk`](https://www.npmjs.com/package/@3maem/ash-node-sdk) protects real API endpoints against payload tampering, request forgery, replay attacks, and step-skipping.
 
 ## What is ASH?
